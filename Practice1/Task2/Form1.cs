@@ -34,7 +34,7 @@ namespace Task2
 			int result = Extension.MessageBox(IntPtr.Zero, $"Це ваше число - {r}?", "Message",
 											  Extension.MB_YESNO | Extension.MB_ICONQUESTION);
 
-			if (result == 6)
+			if (result == 6 && number == r)
 			{
 				Extension.MessageBox(IntPtr.Zero, $"Вгадав!", "Message",
 											  Extension.MB_YESNO | Extension.MB_ICONQUESTION);
