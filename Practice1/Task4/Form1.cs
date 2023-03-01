@@ -21,12 +21,15 @@ namespace Task4
 
 		private void ChangeTitle()
 		{
+			timer1.Enabled = true;
 			IntPtr hWnd = Extension.FindWindow("Notepad", null);
 			if (hWnd == IntPtr.Zero)
 			{
+				timer1.Enabled = false;
 				MessageBox.Show("Notepad window not found!");
 				return;
 			}
+
 
 			string time = DateTime.Now.ToString("HH:mm:ss");
 
