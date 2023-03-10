@@ -33,6 +33,7 @@
 			Btn_SetTextBoxFont = new Button();
 			label4 = new Label();
 			groupBox3 = new GroupBox();
+			ComboBox_TextBoxTextColor = new ComboBox();
 			Btn_SetTextBoxTextColor = new Button();
 			label3 = new Label();
 			groupBox2 = new GroupBox();
@@ -44,7 +45,7 @@
 			CheckBox_ReadOnlyTB = new CheckBox();
 			label1 = new Label();
 			GroupBox_PictureBox = new GroupBox();
-			ComboBox_TextBoxTextColor = new ComboBox();
+			ComboBox_SetFontTextBox = new ComboBox();
 			GroupBox_TextBox.SuspendLayout();
 			groupBox4.SuspendLayout();
 			groupBox3.SuspendLayout();
@@ -67,11 +68,12 @@
 			// 
 			// groupBox4
 			// 
+			groupBox4.Controls.Add(ComboBox_SetFontTextBox);
 			groupBox4.Controls.Add(Btn_SetTextBoxFont);
 			groupBox4.Controls.Add(label4);
 			groupBox4.Location = new Point(6, 224);
 			groupBox4.Name = "groupBox4";
-			groupBox4.Size = new Size(296, 68);
+			groupBox4.Size = new Size(296, 69);
 			groupBox4.TabIndex = 4;
 			groupBox4.TabStop = false;
 			// 
@@ -104,6 +106,14 @@
 			groupBox3.TabIndex = 3;
 			groupBox3.TabStop = false;
 			// 
+			// ComboBox_TextBoxTextColor
+			// 
+			ComboBox_TextBoxTextColor.FormattingEnabled = true;
+			ComboBox_TextBoxTextColor.Location = new Point(6, 39);
+			ComboBox_TextBoxTextColor.Name = "ComboBox_TextBoxTextColor";
+			ComboBox_TextBoxTextColor.Size = new Size(188, 23);
+			ComboBox_TextBoxTextColor.TabIndex = 4;
+			// 
 			// Btn_SetTextBoxTextColor
 			// 
 			Btn_SetTextBoxTextColor.Location = new Point(215, 15);
@@ -112,6 +122,7 @@
 			Btn_SetTextBoxTextColor.TabIndex = 3;
 			Btn_SetTextBoxTextColor.Text = "OK";
 			Btn_SetTextBoxTextColor.UseVisualStyleBackColor = true;
+			Btn_SetTextBoxTextColor.Click += Btn_SetTextBoxTextColor_Click;
 			// 
 			// label3
 			// 
@@ -141,9 +152,11 @@
 			Btn_SetTextBoxBackColor.TabIndex = 3;
 			Btn_SetTextBoxBackColor.Text = "OK";
 			Btn_SetTextBoxBackColor.UseVisualStyleBackColor = true;
+			Btn_SetTextBoxBackColor.Click += Btn_SetTextBoxBackColor_Click;
 			// 
 			// ComboBox_TextBoxBackgroundColor
 			// 
+			ComboBox_TextBoxBackgroundColor.DropDownStyle = ComboBoxStyle.DropDownList;
 			ComboBox_TextBoxBackgroundColor.FormattingEnabled = true;
 			ComboBox_TextBoxBackgroundColor.Location = new Point(6, 37);
 			ComboBox_TextBoxBackgroundColor.Name = "ComboBox_TextBoxBackgroundColor";
@@ -207,13 +220,13 @@
 			GroupBox_PictureBox.TabStop = false;
 			GroupBox_PictureBox.Text = "Change MyPictureBox";
 			// 
-			// ComboBox_TextBoxTextColor
+			// ComboBox_SetFontTextBox
 			// 
-			ComboBox_TextBoxTextColor.FormattingEnabled = true;
-			ComboBox_TextBoxTextColor.Location = new Point(6, 39);
-			ComboBox_TextBoxTextColor.Name = "ComboBox_TextBoxTextColor";
-			ComboBox_TextBoxTextColor.Size = new Size(188, 23);
-			ComboBox_TextBoxTextColor.TabIndex = 4;
+			ComboBox_SetFontTextBox.FormattingEnabled = true;
+			ComboBox_SetFontTextBox.Location = new Point(6, 37);
+			ComboBox_SetFontTextBox.Name = "ComboBox_SetFontTextBox";
+			ComboBox_SetFontTextBox.Size = new Size(188, 23);
+			ComboBox_SetFontTextBox.TabIndex = 5;
 			// 
 			// Form1
 			// 
@@ -258,5 +271,6 @@
 		private Button Btn_SetTextBoxTextColor;
 		private Button Btn_SetTextBoxBackColor;
 		private ComboBox ComboBox_TextBoxTextColor;
+		private ComboBox ComboBox_SetFontTextBox;
 	}
 }

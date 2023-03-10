@@ -10,6 +10,8 @@ namespace Task4_ControllingApp
 	internal class Extension
 	{
 		public const int EM_SETREADONLY = 0xCF;
+		public const int EM_SETBKGNDCOLOR = 0x152;
+		public const int EM_SETTEXTCOLOR = 0x00C1;
 
 		[DllImport("user32.dll", SetLastError = true, CharSet = CharSet.Auto)]
 		public static extern IntPtr FindWindow(string lpClassName, string lpWindowName);

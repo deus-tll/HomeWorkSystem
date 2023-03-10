@@ -22,7 +22,18 @@ namespace Task4_ControllingApp
 		public ColorItem[] Colors { get; }
 		public ColorItemList()
 		{
-			Colors
+			Colors = new ColorItem[]
+			{
+				new ColorItem {Name = "White", Value = Color.White},
+				new ColorItem {Name = "Red", Value = Color.Red},
+				new ColorItem {Name = "Black", Value = Color.Black},
+				new ColorItem {Name = "Blue", Value = Color.Blue},
+				new ColorItem {Name = "Yellow", Value = Color.Yellow},
+				new ColorItem {Name = "Green", Value = Color.Green},
+				new ColorItem {Name = "DarkGray", Value = Color.DarkGray},
+				new ColorItem {Name = "BlueViolet", Value = Color.BlueViolet},
+				new ColorItem {Name = "Orange", Value = Color.Orange},
+			};
 		}
 	}
 }
