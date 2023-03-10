@@ -30,7 +30,6 @@ namespace Task4
 				return;
 			}
 
-
 			string time = DateTime.Now.ToString("HH:mm:ss");
 
 			IntPtr len = new IntPtr(time.Length);
