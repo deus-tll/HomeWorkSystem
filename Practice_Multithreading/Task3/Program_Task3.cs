@@ -1,4 +1,6 @@
-﻿namespace Task3
+﻿using System.Threading;
+
+namespace Task3
 {
 	internal class Program_Task3
 	{
@@ -27,6 +29,7 @@
 
 				Thread thread = new(() => ShowNumbers(threadStartNum, threadEndNum));
 				thread.Start();
+				thread.Join();
 			}
 
 			Console.WriteLine("Main thread end");
@@ -35,11 +38,13 @@
 		public static void ShowNumbers(int start, int end)
 		{
             Console.WriteLine($"Start thread with ID - {Environment.CurrentManagedThreadId}");
-            for (int i = start; i <= end; i++)
+
+			for (int i = start; i <= end; i++)
 			{
 				Console.WriteLine(i);
 				Thread.Sleep(1);
 			}
+
 			Console.WriteLine($"End thread with ID - {Environment.CurrentManagedThreadId}");
 		}
 	}
